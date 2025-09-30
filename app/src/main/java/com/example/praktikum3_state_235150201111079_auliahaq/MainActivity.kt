@@ -12,6 +12,8 @@ import androidx.compose.ui.unit.dp
 import com.example.praktikum3_state_235150201111079_auliahaq.ui.ColorBoxSection
 import com.example.praktikum3_state_235150201111079_auliahaq.ui.CounterSection
 import com.example.praktikum3_state_235150201111079_auliahaq.ui.ProfileCardSection
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +24,7 @@ class MainActivity : ComponentActivity() {
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
+                            .verticalScroll(rememberScrollState())
                             .padding(16.dp),
                         verticalArrangement = Arrangement.spacedBy(24.dp)
                     ) {
